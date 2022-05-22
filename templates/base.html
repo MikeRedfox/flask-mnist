@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='app.css') }}">
+    <title>Digit Recognition</title>
+</head>
+
+<body>
+    <h1 id="header">Handwritten digit recognition</h1>
+    <p>You can see this project <a href="https://github.com/MikeRedfox/flask-mnist">here</a>, or follow me on Twitter <a
+            href="https://twitter.com/GuardaMichele">here</a></p>
+    <br>
+    <div id="container">
+        <!-- Elementi html -->
+        <h2 id="title"> Write a number (0-9)</h2>
+        <canvas id="canvas" width="320" height="320"></canvas>
+        <br>
+        <!-- <button id="clear_button">Clear</button> -->
+        <div id="process_button">Process image</div>
+        <p id="result"></p>
+    </div>
+    <!-- Script per far funzionare Fabric -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- <script src="{{ url_for('static', filename='node_modules/fabric/dist/fabric.js')}}"></script> -->
+    <script src="{{ url_for('static', filename='fabric.min.js')}}"></script>
+    <script data-main="../static/app" src="../static/require.js"></script>
+    <script type="module" src="{{url_for('static', filename='app.js')}}"></script>
+
+
+
+</body>
+
+</html>
